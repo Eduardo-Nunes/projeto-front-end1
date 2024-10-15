@@ -1,6 +1,10 @@
 body {
     background-color: #EBEBEB;
     margin: 0 10px;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100vw;
 }
 
 header {
@@ -17,6 +21,11 @@ header a {
     text-transform: uppercase;
     font-size: 10px;
     font-weight: lighter;
+    border-right: 1px solid white;
+}
+
+header a:last-child {
+    border-right: none;
 }
 
 header a.active {
@@ -52,9 +61,10 @@ header img {
 
 .folder {
     position: relative;
+    width: 100%;
 }
 
-.folder img {
+.folder #banner {
     width: 100%;
 }
 
@@ -91,4 +101,76 @@ header img {
     font-style: italic;
     font-weight: lighter;
     font-size: 16px;
+}
+
+section {
+    padding: 10px 20px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: min-content;
+    column-gap: 20px;
+    max-width: 100vw;
+   
+}
+
+section article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 30px
+}
+
+section article .article-title-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #1BB4E8;
+    justify-content: left;
+    padding-left: 10px;
+    height: 40px;
+    color: white;
+    font-style: italic;
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+section article #barco-destino {
+    width: 100%;
+    flex-grow: 1;
+}
+
+section article:last-child .article-title-container {
+    background-color: #C6B07F
+}
+
+section article .article-text-container {
+    margin-bottom: 40px;
+}
+
+section article .article-text-container h3 {
+    font-style: italic;
+    font-weight: lighter;
+    font-size: large;
+}
+
+section article .article-text-container p {
+    font-size: small;
+    font-weight: lighter;
+}
+
+section article .nossa-frota-img-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+section article .nossa-frota-img-container img {
+ width: 100%;
+}
+
+footer {
+    padding: 20px;
+    font-size: small;
+    font-weight: lighter;
 }
